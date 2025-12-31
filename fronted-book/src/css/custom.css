@@ -1,30 +1,216 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global custom styles for Docusaurus
+ * SAFE VERSION – UI & background protected
  */
 
-/* You can override the default Infima variables here. */
+/* ================= ROOT VARIABLES ================= */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Primary Theme */
+  --ifm-color-primary: #7fa6f8;
+  --ifm-color-primary-dark: #1e40af;
+  --ifm-color-primary-darker: #1e3a8a;
+  --ifm-color-primary-darkest: #172554;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #dbeafe;
+
+  /* Status colors */
+  --ifm-color-success: #16a34a;
+  --ifm-color-info: #0284c7;
+  --ifm-color-warning: #ca8a04;
+  --ifm-color-danger: #dc2626;
+
+  /* Typography */
+  --ifm-font-family-base: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.7;
+  --ifm-heading-font-weight: 600;
+
+  /* Radius & shadows */
+  --ifm-global-radius: 8px;
+  --ifm-global-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+
+  /* Code */
+  --ifm-code-border-radius: 6px;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ================= DARK MODE (SAFE) ================= */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #93c5fd;
+  --ifm-color-primary-dark: #60a5fa;
+  --ifm-color-primary-darker: #3b82f6;
+  --ifm-color-primary-darkest: #2563eb;
+  --ifm-color-primary-light: #bfdbfe;
+  --ifm-color-primary-lighter: #dbeafe;
+  --ifm-color-primary-lightest: #eff6ff;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+}
+
+/* ================= TEXT READABILITY FIX ================= */
+.markdown,
+.hero,
+.feature-card,
+.card {
+  color: #1f2937;
+}
+
+[data-theme='dark'] .markdown,
+[data-theme='dark'] .hero,
+[data-theme='dark'] .feature-card,
+[data-theme='dark'] .card {
+  color: #e5e7eb;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  color: #334155;
+}
+
+[data-theme='dark'] .hero__title {
+  color: #f8fafc;
+}
+
+[data-theme='dark'] .hero__subtitle {
+  color: #cbd5e1;
+}
+
+/* ================= FEATURE CARDS ================= */
+.features {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: var(--ifm-global-radius);
+  padding: 2rem;
+  box-shadow: var(--ifm-global-shadow);
+  transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-card h3 {
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: #374151;
+}
+
+[data-theme='dark'] .feature-card {
+  background: #1e293b;
+}
+
+[data-theme='dark'] .feature-card p {
+  color: #e5e7eb;
+}
+
+/* ================= MARKDOWN CONTENT ================= */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  color: #0f172a;
+}
+
+[data-theme='dark'] .markdown h1,
+[data-theme='dark'] .markdown h2,
+[data-theme='dark'] .markdown h3,
+[data-theme='dark'] .markdown h4 {
+  color: #f8fafc;
+}
+
+.markdown p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+[data-theme='dark'] .markdown p {
+  color: #d1d5db;
+}
+
+/* ================= ALERTS ================= */
+.alert--success {
+  color: #065f46;
+}
+.alert--info {
+  color: #075985;
+}
+.alert--warning {
+  color: #78350f;
+}
+.alert--danger {
+  color: #7f1d1d;
+}
+
+[data-theme='dark'] .alert--success,
+[data-theme='dark'] .alert--info,
+[data-theme='dark'] .alert--warning,
+[data-theme='dark'] .alert--danger {
+  color: #f9fafb;
+}
+
+/* ================= BUTTONS ================= */
+.button {
+  border-radius: var(--ifm-global-radius);
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* ================= SIDEBAR ================= */
+.menu__link {
+  border-radius: 6px;
+}
+
+.menu__link--active {
+  background: var(--ifm-color-primary-lightest);
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+/* ================= ACCESSIBILITY ================= */
+:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+  .features {
+    flex-direction: column;
+  }
 }

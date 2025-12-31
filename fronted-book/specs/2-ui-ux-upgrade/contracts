@@ -1,0 +1,63 @@
+# Styling Contracts for UI/UX Upgrade
+
+## CSS Custom Properties (Theme Variables)
+
+### Color Variables
+- `--ifm-color-primary`: Primary brand color
+- `--ifm-color-primary-dark`: Darker shade of primary
+- `--ifm-color-primary-darker`: Even darker shade
+- `--ifm-color-primary-darkest`: Darkest shade
+- `--ifm-color-primary-light`: Lighter shade of primary
+- `--ifm-color-primary-lighter`: Even lighter shade
+- `--ifm-color-primary-lightest`: Lightest shade
+- `--ifm-color-secondary`: Secondary color
+- `--ifm-color-success`: Success state color
+- `--ifm-color-info`: Information state color
+- `--ifm-color-warning`: Warning state color
+- `--ifm-color-danger`: Error state color
+
+### Typography Variables
+- `--ifm-font-family-base`: Base font family
+- `--ifm-font-size-base`: Base font size
+- `--ifm-line-height-base`: Base line height
+- `--ifm-heading-font-family`: Heading font family
+- `--ifm-heading-font-weight`: Heading font weight
+
+### Spacing Variables
+- `--ifm-spacing-vertical`: Vertical spacing unit
+- `--ifm-spacing-horizontal`: Horizontal spacing unit
+- `--ifm-global-radius`: Border radius
+- `--ifm-global-shadow`: Box shadow
+
+## Component Class Customization Points
+
+### Navigation Components
+- `.navbar`: Main navigation bar styling
+- `.navbar__brand`: Logo/branding area customization
+- `.navbar__items`: Navigation items container
+- `.menu`: Sidebar menu styling
+- `.menu__link`: Menu links customization
+- `.menu__list`: Menu list items styling
+
+### Content Components
+- `.main-wrapper`: Main content wrapper
+- `.container`: Content container styling
+- `.markdown`: Markdown content styling
+- `.theme-code-block`: Code block styling
+- `.alert`: Alert/callout components styling
+
+### Layout Components
+- `.footer`: Footer component styling
+- `.hero`: Hero section styling (if used)
+- `.table-of-contents`: Table of contents styling
+
+## Responsive Design Specifications
+- `--ifm-container-width`: Maximum container width
+- `--ifm-container-width-xl`: Extra large container width
+- Mobile-first responsive approach with appropriate breakpoints
+
+## Accessibility Standards
+- Focus state styling for keyboard navigation
+- Proper color contrast ratios (WCAG 2.1 AA)
+- Semantic HTML structure preservation
+- Screen reader compatibility

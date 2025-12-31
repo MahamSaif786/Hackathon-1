@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Physical AI & Humanoid Robotics Book',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Physical AI and Humanoid Robotics explores intelligent machines in the real world.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -82,27 +82,36 @@ onBrokenMarkdownLinks: 'ignore',
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'static/img/docusaurus-social-card.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'Physical AI & Humanoid Robotics',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Physical AI & Humanoid Robotics Logo',
+          src: 'img/my-logo.png',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Book Chapters',
           },
-          
+          {
+            to: '/docs/intro',
+            label: 'Getting Started',
+            position: 'left',
+          },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: 'https://discordapp.com/invite/docusaurus',
+            label: 'Discord',
             position: 'right',
           },
         ],
@@ -111,46 +120,58 @@ onBrokenMarkdownLinks: 'ignore',
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Book Modules',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Module 1: ROS 2 Nervous System',
+                to: '/docs/module-1-ros2/chapter-1-introduction',
+              },
+              {
+                label: 'Module 2: Digital Twin',
+                to: '/docs/module-2-digital-twin/chapter-1-digital-twins',
+              },
+              {
+                label: 'Module 3: AI Robot Brain',
+                to: '/docs/module-3-ai-robot-brain/chapter-1-ai-brain-intro',
+              },
+              {
+                label: 'Module 4: Vision-Language-Action',
+                to: '/docs/module-4-vision-language-action/introduction-to-vla',
+              },
+            ],
+          },
+          {
+            title: 'Resources',
+            items: [
+              {
+                label: 'Getting Started',
                 to: '/docs/intro',
               },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'GitHub Repository',
+                href: 'https://github.com/facebook/docusaurus',
               },
               {
-                label: 'Discord',
+                label: 'Community Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
             ],
           },
           {
-            title: 'More',
+            title: 'Legal',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Privacy Policy',
+                href: '#',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Terms of Service',
+                href: '#',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Book. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
